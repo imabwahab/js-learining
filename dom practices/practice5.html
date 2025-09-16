@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice5</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <p class="paragraph">Welcome to my website</p>
+  </nav>
+  <div class="block">
+    <h4>Hey There, My name is <span class="username">Abdul Wahab</span>
+    </h4>
+    <p class="paragraph">Here is a code for you.</p>
+    <pre><code>console.log('Hey There')</code></pre>
+  </div>
+
+  <div id="my-container"></div>
+  <div class="block">
+    <button id="click-button">add elements</button>
+  </div>
+
+  <script>
+    const button = document.getElementById('click-button');
+    const container = document.getElementById('my-container');
+
+    button.addEventListener('click', () => {
+      const el = document.createElement('h1');
+      const pr =  prompt('Enter text');
+      console.log(pr)
+      el.innerText = pr;
+      container.appendChild(el);
+    })
+  </script>
+
+</body>
+
+</html>
