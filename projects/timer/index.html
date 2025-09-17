@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #1e1e1e;
+      color: #00ffcc;
+      font-family: "Courier New", monospace;
+    }
+
+    #time-box {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    #button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #00ffcc;
+      color: #1e1e1e;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    #button:hover {
+      background: #00cc99;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="time-box">--:--:--</h1>
+  <button id="button">Start Clock</button>
+
+  <script>
+    const timeBox = document.getElementById('time-box');
+    const button = document.getElementById('button');
+    let intervalId = null;
+
+    const updateTime = () => {
+      const time = new Date();
+      timeBox.innerHTML = time.toLocaleTimeString();
+    };
+
+    button.addEventListener('click', () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+        button.textContent = "Start Clock";
+      } else {
+        updateTime(); // show instantly
+        intervalId = setInterval(updateTime, 1000);
+        button.textContent = "Stop Clock";
+      }
+    });
+  </script>
+</body>
+</html>
