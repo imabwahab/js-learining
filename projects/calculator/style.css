@@ -1,0 +1,72 @@
+/* General Page Styling */
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Calculator Box */
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 320px;
+}
+
+/* Input Display */
+#num-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 24px;
+  text-align: right;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #f1f3f6;
+  color: #333;
+}
+
+/* Calculator Buttons */
+.equal,
+.clear,
+.c-button {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover & Active Effects */
+.c-button:hover {
+  background: #007bff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.c-button:active {
+  transform: scale(0.95);
+  background: #0056b3;
+}
+
+/* Special Clear Button */
+.clear,
+.equal,
+.c-button:nth-child(4) {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.c-button:nth-child(2):hover {
+  background: #cc0000;
+}
