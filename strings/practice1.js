@@ -52,7 +52,7 @@ console.log(text3.trimEnd());
 // the repeat() method returns a string with a number of copies of a string
 let tx = "Apple, banana.";
 let repeat = tx.repeat(4);
-console.log('repeat', repeat);
+console.log('repeat', repeat); 
 
 // replace() method replaces a specified value with another value in string
 let instrctions = "Please, visit, Microsoft!";
