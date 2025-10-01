@@ -16,9 +16,12 @@ x += 5; // 15
 x -= 3; // 12
 
 // Comparison
-console.log(5 == "5");  // true (loose equality)
-console.log(5 === "5"); // false (strict equality)
-console.log(5 !== 3);   // true
+//console.log(5 == "5");  
+// // true (loose equality)
+//.log(5 === "5"); 
+// false (strict equality)
+//console.log(5 !== 3);  
+//  // true
 
 // Logical
 console.log(true && false); // false
@@ -32,7 +35,7 @@ console.log(5 & 3); // 1 (0101 & 0011)
 let str = "hello";
 console.log(typeof str); // "string"
 
-class Car {}
+class Car { }
 let car = new Car();
 console.log(car instanceof Car); // true
 
@@ -40,4 +43,4 @@ let obj = { name: "Alice" };
 console.log("name" in obj); // true
 
 
-export {}
+export { }
