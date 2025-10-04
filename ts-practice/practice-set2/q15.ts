@@ -1,0 +1,1 @@
+// Use the Partial<T> utility type to make all properties of a User type optional.

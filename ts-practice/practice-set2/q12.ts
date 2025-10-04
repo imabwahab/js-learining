@@ -22,3 +22,16 @@ let st1: studentData = {
   year: 2020
 
 }
+
+
+// Interfaces are similar to type aliases , except they only apply to object types.
+
+interface Rectangle {
+  height : number,
+  width : number
+}
+
+let rectangle : Rectangle = {
+  height : 200,
+  width : 100
+}
