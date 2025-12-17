@@ -10,7 +10,7 @@ function remarksByAliRaza() {
     .flatMap(({ employees }) => employees)
     .filter(({ name }) => name === "Ali Raza")
     .flatMap(({ performanceMetrics }) => performanceMetrics)
-    .flatMap(({ awards, remarks }) => ({ awards: awards.toString(), remarks: remarks.toString() }))
+    .map(({ awards, remarks }) => ({ awards: awards.toString(), remarks: remarks.toString() }))
 }
 
 console.log(remarksByAliRaza())

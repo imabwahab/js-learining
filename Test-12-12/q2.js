@@ -6,18 +6,15 @@ import { stateBankOfPakistan } from "./data.js";
 function listOfAwards() {
   return stateBankOfPakistan.headquarters.buildings
     .flatMap((building) => building.departments)
-    .flatMap((department) => department)
     .flatMap((department) => department.teams)
     .filter(({ name }) => name === "Audit Team")
     .flatMap(({ employees }) => employees)
-    .map((emp) => {
-      emp.performanceMetrics?.map((per) => {
-        if (per.awards.length > 0) {
-          console.log(emp.name)
-        }
-      })
-    })
+    .filter((emp) => {
+      if (emp.performanceMetrics?.some(({ awards }) => awards && awards.length > 0)) {
+        return emp;
+      }
+    }).map(({ name }) => name)
 
 }
 
-listOfAwards()
+console.log(listOfAwards())

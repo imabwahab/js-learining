@@ -5,9 +5,11 @@ import { stateBankOfPakistan } from "./data.js";
 
 function stockOfNotes() {
   return stateBankOfPakistan.currency.notes
-    .filter(({ denomination }) => denomination === 5000)
+    .filter(({ denomination }) => denomination === 5000 || denomination === 1000)
     .flatMap(({ vaults }) => vaults)
     .reduce((a, b) => a + b.stored, 0)
 }
 
 console.log(stockOfNotes())
+
+

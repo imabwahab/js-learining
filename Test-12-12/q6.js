@@ -10,7 +10,7 @@ function employessOfDistributionTeam() {
     .flatMap(({ teams }) => teams)
     .filter(({ name }) => name === "Distribution Team")
     .flatMap(({ employees }) => employees)
-    .map(({ name, role, skills }) => ({ name, role, skills }))
+    .map(({ name, role, skills }) => ({ name, role, skills:skills.toString() }))
 }
 
 console.log(employessOfDistributionTeam())

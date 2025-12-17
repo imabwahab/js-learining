@@ -12,8 +12,8 @@ function inspectionByRehan() {
     .flatMap(({ inspections }) => inspections)
     .filter(({ score }) => score > 90)
     .map((bank) => bank.documents
-      .map((doc) => console.log(bank.bank, ":", doc.type))
+      .map((doc) => ({ bankName: bank.bank, DocTypes: doc.type }))
     )
 }
 
-inspectionByRehan()
+console.log(inspectionByRehan())

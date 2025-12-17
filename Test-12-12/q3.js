@@ -12,7 +12,7 @@ function compaignNames() {
     .flatMap(({ employees }) => employees)
     .flatMap(({ campaigns }) => campaigns)
     .filter(({ metrics }) => metrics.reviewedByGov === true && metrics.reportPages > 100)
-    .map(({ name }) => name)
+    .map(({ name }) => name).toString()
 
 }
 

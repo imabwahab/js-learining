@@ -6,7 +6,6 @@ import { stateBankOfPakistan } from "./data.js";
 function incompleteInAuditTeam() {
   return stateBankOfPakistan.headquarters.buildings
     .flatMap((building) => building.departments)
-    .flatMap((department) => department)
     .flatMap((department) => department.teams)
     .filter(({ name }) => name === "Audit Team")
     .flatMap(({ employees }) => employees)
